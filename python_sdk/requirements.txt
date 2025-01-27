@@ -1,0 +1,11 @@
+Flask
+Flask-Testing
+FastAPI
+Uvicorn
+torch
+TensorFlow
+requests
+pydantic
+pytest
+gunicorn
+python-dotenv
