@@ -9,3 +9,4 @@ pydantic
 pytest
 gunicorn
 python-dotenv
+web3
