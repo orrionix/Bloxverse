@@ -1,5 +1,3 @@
-# config/settings.py
-
 import os
 
 # Environment configuration
@@ -25,3 +23,6 @@ AI_MODEL_PATH = os.getenv('AI_MODEL_PATH', 'coin_ai/models/model_data.bin')
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'DEBUG')  # Default log level
 LOG_FILE = os.getenv('LOG_FILE', 'app.log')  # Default log file
 
+# Web3 Configuration for Blockchain Integration
+WEB3_RPC_URL = os.getenv('WEB3_RPC_URL', 'https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID')  # Example default for Infura
+TOKEN_CONTRACT_ADDRESS = os.getenv('TOKEN_CONTRACT_ADDRESS', '0xTokenContractAddress')  # Example token contract address
