@@ -1,5 +1,5 @@
-import re
 from flask import request
+
 
 def validate_coin_features(coin_features):
     """
@@ -28,6 +28,7 @@ def validate_coin_features(coin_features):
 
     return True, "Valid coin features."
 
+
 def validate_request_data():
     """
     Validate the data sent in the request body.
@@ -47,6 +48,7 @@ def validate_request_data():
 
     return True, "Request data is valid."
 
+
 def validate_authentication_token(auth_token):
     """
     Validate the format of an authentication token (e.g., length and characters).
@@ -56,6 +58,7 @@ def validate_authentication_token(auth_token):
         return False, "Invalid authentication token format."
 
     return True, "Authentication token is valid."
+
 
 def validate_user_input(input_data, input_type='string'):
     """
@@ -75,6 +78,7 @@ def validate_user_input(input_data, input_type='string'):
     
     return True, "User input is valid."
 
+
 def validate_coin_id(coin_id):
     """
     Validate the format of a coin ID. 
@@ -84,6 +88,7 @@ def validate_coin_id(coin_id):
         return False, "Coin ID must be a non-empty string."
 
     return True, "Coin ID is valid."
+
 
 def validate_roblox_character_id(character_id):
     """

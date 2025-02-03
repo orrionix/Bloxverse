@@ -1,6 +1,7 @@
 import logging
 import os
 
+
 # Set up a log directory if it doesn't exist
 log_dir = 'logs'
 if not os.path.exists(log_dir):
@@ -31,6 +32,7 @@ console_handler.setFormatter(log_format)
 # Add the handlers to the logger
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
+
 
 def get_logger():
     """
