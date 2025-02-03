@@ -1,9 +1,8 @@
-# coin_ai/models/model_data.py
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
+
 
 # Define a simple neural network model
 class SimpleNN(nn.Module):
@@ -20,9 +19,15 @@ class SimpleNN(nn.Module):
         x = self.sigmoid(self.output_layer(x))
         return x
 
+
 # Create some dummy data to train the model
-X_train = torch.tensor(np.random.rand(100, 10), dtype=torch.float32)  # 100 samples, 10 features
-y_train = torch.tensor(np.random.randint(0, 2, size=(100, 1)), dtype=torch.float32)  # Random binary labels
+X_train = torch.tensor(
+    np.random.rand(100, 10), dtype=torch.float32
+)  # 100 samples, 10 features
+
+y_train = torch.tensor(
+    np.random.randint(0, 2, size=(100, 1)), dtype=torch.float32
+)  # Random binary labels
 
 # Create the model, loss function, and optimizer
 model = SimpleNN()
@@ -38,6 +43,6 @@ for epoch in range(5):
     optimizer.step()
 
 # Save the model to a binary file (model_data.bin)
-torch.save(model.state_dict(), 'coin_ai/models/model_data.bin')
+torch.save(model.state_dict(), "coin_ai/models/model_data.bin")
 
 print("Model saved to model_data.bin")
