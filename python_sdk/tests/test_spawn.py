@@ -1,7 +1,8 @@
 import unittest
-from flask import Flask, jsonify
+from flask import Flask
 from server.controllers.spawn_controller import spawn_coin_character
 from unittest.mock import patch
+
 
 class SpawnControllerTestCase(unittest.TestCase):
 
@@ -161,6 +162,7 @@ class SpawnControllerTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 401)
         self.assertIn('error', response.get_json())
         self.assertEqual(response.get_json()['error'], "Invalid authentication token format.")
+
 
 if __name__ == '__main__':
     unittest.main()
